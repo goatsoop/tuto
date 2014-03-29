@@ -37,11 +37,6 @@ def move():
 	queue(quex,quey,score)
 
 
-def stop_it():
-	"arrêt de l'animation"
-	global flag
-	flag=0
-
 def start_it():
 	"démarrage de l'animation"
 	global flag
@@ -105,7 +100,6 @@ x1,y1=200,200
 dx,dy=0,0
 flag=0
 score=0
-nbq=0
 quex,quey=180,180
 
 can1 = Canvas(fen, bg='gray', height=400, width=400)
@@ -116,15 +110,12 @@ fen.bind('<Any-KeyPress-Down>',depl_bas)
 fen.bind('<Any-KeyPress-Left>',depl_gauche)
 fen.bind('<Any-KeyPress-Right>',depl_droite)
 
-a,b=(randrange(20,380,20)),(randrange(20,380,20))
-manger=can1.create_oval(a,b,a+20,b+20)
 
 Label(text='Serpent').grid(pady=15)
 
 serp = can1.create_rectangle(200,200,220,220)
 
 Button(fen,text='Go!',command=start_it).grid()
-Button(fen,text='Stop',command=stop_it).grid()
 
 fen.mainloop()
 
