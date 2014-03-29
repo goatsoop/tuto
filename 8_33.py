@@ -4,7 +4,7 @@
 # Jeu de serpent
 #
 
-from tkinter import *
+from Tkinter import *
 from random import randrange
 
 ####################

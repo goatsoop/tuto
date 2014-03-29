@@ -69,7 +69,7 @@ can.pack(side =TOP, padx =5, pady =5)
 ## ici, du code compacté selon l'astuce donnée p.100 du tuto! ##
 ## simple création des boutons ##
 Button(fen, text ='damier', command =damier).pack(side =LEFT, padx =3, pady =3)
-Button(fen, text ='pion', command =pion).pack(side =RIGHT, padx =3, pady =3)
+Button(fen, text ='pion', command =pion()).pack(side =RIGHT, padx =3, pady =3)
 
 ## et boucle de programme...##
 fen.mainloop()
